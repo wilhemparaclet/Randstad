@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic interactive video with HTML5 and vanilla JavaScript</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        
+        <!-- Read my blog post on interactive videos: https://mostlydevstuff.com/2018/basic-interactive-video-with-html5-and-javascript/  --> 
+    
+        <style>
+            body{
+                margin: auto;
+            }
+            .hide {
+                display: none;
+            }
+            a .fa:hover{
+                color: red;
+
+            }
+            .fa {
+                justify-items: center;
+                display: grid;
+            }
+            h1{
+                color: #000;
+                font-size: 16px;
+            }
+            button{
+                 align-items: center;
+                display: block;
+                /* justify-content: center; */
+                /* align-content: center; */
+                /* flex-wrap: nowrap; */
+                margin: 20px auto;
+                border: 1px solid #40E0D0;
+                background: #40E0D0;
+                padding: 5px 20px;
+                border-radius: 20px;
+            }
+
+            .initial {
+                display: block;
+            }
+
+
+            @media only screen and (max-width: 768px) {
+                .menu ul li, .menu1 ul li, .menu2 ul li, .menu3 ul li, .menu4 ul li, .menu5 ul li, .menu6 ul li, .menu7 ul li, .menu8 ul li   {
+                    display: inline-block;
+                    margin-right: 20px;
+                }
+            }
+
+        </style>
+
+        <div>
+                    <div class="initial hide">
+                        <h1 align=center style="color: #db3866; font-size: 27px;     margin-top: 100px; padding: 20px ">Wouah ! Ces offres correspondent à votre profil </h1>
+                       
+                        <div style="
+                            align-content: center;
+                            justify-content: center;
+                            border: 1px solid #00000024;
+                            margin: 0px 5%;
+                            border-radius: 20px;">
+                            <div style="display: flex;
+                            flex-wrap: nowrap;
+                            flex-direction: row;
+                            align-content: flex-end;
+                            justify-content: space-around;
+                            align-items: center;">
+                                <h2 style="font-size: 16px">Préparateur de commande </h2>
+                                <h3 style="background-color: #ffd300; border-radius: 20px; padding: 5px 20px; font-size: 11px">Intérim </h3>
+                                <a><i class="fa fa-thin fa-heart"></i></a>
+                            </div> 
+                        <div style="display: flex;
+                            ">
+                            
+                            <img src="t%C3%A9l%C3%A9chargement%20(1).jpeg" style="padding: 10px; border-radius: 20px" width="130px"/>
+
+                            <div style="padding: 10px;">
+                                <h2 style="font-size: 15px">Leroy merlin </h2>
+                                <p> Le metier d'inventaire consiste à réaliser des inventaires pour les différentes structures en particulier dans le secteur de la grande distribution et des chaines...</p>
+                            </div>
+                            
+                        </div>
+                            <button> Matchez l'offre </button>
+                        </div>
+                        
+                        <div style="background-color: #fbd449;
+                            padding: 20px 0px;
+                            border-radius: 20px 20px 0px 0px;
+                            display: flex;
+                            justify-content: space-around;
+                            flex-direction: row;
+                            align-items: center;
+                            bottom: 0%;
+                            width: 100%;
+                            w: 100%;
+                            wid: initial;
+                            position: fixed;">
+                            <a style="    display: grid;justify-items: center;"><img src="icon%20p.png" width="10px" />Accueil</a>
+                            <a style="    display: grid;justify-items: center;"><img src="search.png" width="17px" />Explorer</a>
+                            <a><i class="fa fa-line-chart"> Suivi</i></a>
+                            <a><i class="fa fa-user"> Compte</i></a>
+                        </div>
+                    </div>
+        </div>
+        
+    </body>
+</html>
