@@ -8,20 +8,11 @@
         <!-- Read my blog post on interactive videos: https://mostlydevstuff.com/2018/basic-interactive-video-with-html5-and-javascript/  --> 
     
         <style>
-            body{
-                margin: auto;
-            }
             .hide {
                 display: none;
             }
-            h1{
-                color: #fff;
-            }
 
             .initial {
-                display: block;
-            }
-            .cat1 {
                 display: block;
             }
 
@@ -30,28 +21,35 @@
                 max-width: 700px;
                 height: 400px;
                 margin: 0 auto;
-            }   
-            .videos video {
-                height: auto;
-                position: relative;
-                margin: 0 auto;
             }
 
+            .videos video {
+                max-width: 100%;
+                height: auto;
+            }
+            h1{
+                color: #000;
+                font-size:16px; 
+            }
             .play {
-               display: flex;
+                display: flex;
                 align-items: center;
                 justify-content: center;
                 position: absolute;
                 width: 100%;
-                height: auto;
+                height: 550px;
                 padding: 0;
                 top: 0;
+                background-color: black;
             }
 
             .play:hover .fil1 {
                 fill: #fff;
             }
 
+            a #retour{
+                width: 30px; float: left; display: block; padding-left: 20px;
+            }
             .menu, .menu1, .menu2, .menu3, .menu4, .menu5, .menu6, .menu7, .menu8 {
                 background-color: rgba(0, 0, 0, .5);
             }
@@ -69,7 +67,11 @@
             }
 
             .menu a, .menu1 a, .menu2 a, .menu3 a, .menu4 a, .menu5 a, .menu6 a, .menu7 a, .menu8 a  {
-                color: #fff;
+                
+                color: #000;
+                background: #ffd300;
+                padding: 10px 20px;
+                border-radius: 20px;
             }
 
             .menu a:hover, .menu1 a:hover, .menu2 a:hover, .menu3 a:hover, .menu4 a:hover, .menu5 a:hover, .menu6 a:hover, .menu7 a:hover, .menu8 a:hover  {
@@ -93,28 +95,29 @@
         <div class="videos">
             <div class="active initial closing">
                 <video>
-                    <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                    <source src="Video/20220407_163020.mp4"
+                            type="video/mp4">
+
                 </video>
             </div>
             <div class="cat hide">
                 <video>
-                    <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                    <source src="Video/20220407_163238.mp4" type="video/mp4">
                 </video>
-                
             </div>
             <div class="dog hide">
                 <video>
-                    <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                    <source src="Video/20220407_163238.mp4" type="video/mp4">
                 </video>
             </div>
             <div class="let hide">
                 <video>
-                    <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                    <source src="Video/20220407_163327.mp4" type="video/mp4">
                 </video>
             </div>
             <div class="rex hide">
                 <video>
-                    <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                    <source src="Video/20220407_163527.mp4" type="video/mp4">
                 </video>
             </div>
             <div class="trex hide">
@@ -129,12 +132,12 @@
             </div>
             <div class="re hide">
                 <video>
-                    <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                    <source src="Video/20220407_164427.mp4" type="video/mp4">
                 </video>
             </div>
             <div class="ex hide">
                 <video>
-                    <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                    <source src="Video/20220407_164517.mp4" type="video/mp4">
                 </video>
             </div>
             <div class="play">
@@ -143,15 +146,18 @@
             </div>
             <div class="menu hide">
                 <div class="menu-wrapper">
-                    <div class="initial hide">
-                        <h1>Sait tu ce que tu veut faire ?</h1>
-                    </div>
+                    
                     <div class="options hide" style="background: #ffffff33;
                 margin: 0px 3%;
                 padding: 4px;
+                margin-top: 450px !important;
                 border-radius: 20px;
-                border: 1px solid yellow;">
+                border: 3px solid #ffd300;">
+                        <div class="initial hide">
+                            <h1>Sait tu ce que tu veut faire ?</h1>
+                        </div>
                         <ul style="display: flex;padding-left: 1px;justify-content: center;">
+                            
                             <li><a >Oui</a></li>
                             <li><a id="cat-person">Non</a></li>
                             
@@ -161,14 +167,17 @@
             </div>
             <div class="menu1 hide">
                 <div class="menu-wrapper">
-                    <div class="initial hide">
-                        <h1>Est ce que tu as des experiences pro ?</h1>
-                    </div>
-                    <div class="options hide" style="background: #ffffff33;
+                    
+                    <div class="options1 hide" style="background: #ffffff33;
                 margin: 0px 3%;
                 padding: 4px;
                 border-radius: 20px;
-                border: 1px solid yellow;">
+                margin-top: 450px !important;
+                border: 3px solid #fbd449;">
+                        
+                        <div class="initial hide">
+                            <h1>Est ce que tu as des experiences pro ?</h1>
+                        </div>
                         <ul style="display: flex;padding-left: 1px;justify-content: center;" >
                             <li><a id="dog-person">Oui</a></li>
                             <li><a>Non</a></li>
@@ -179,16 +188,24 @@
             </div>
             <div class="menu2 hide">
                 <div class="menu-wrapper">
-                    <div class="initial hide">
-                        <h1>Tes 3 dernières experiences pro ?</h1>
-                    </div>
-                    <div class="options hide" style="background: #ffffff33;
+                    
+                    <div class="options2 hide" style="background: #ffffff33;
                 margin: 0px 3%;
                 padding: 4px;
+                margin-top: 450px !important;
                 border-radius: 20px;
-                border: 1px solid yellow;">
-                        <ul style="display: flex;padding-left: 1px;justify-content: center;" >
-                            <input type="text" />
+                border: 3px solid #fbd449;">
+                        <div class="initial hide">
+                            <h1>Tes 3 dernières experiences pro ?</h1>
+                        </div>
+                        <ul style="display: flex;
+                            padding-left: 1px;
+                            justify-content: flex-start;
+                            flex-direction: column;
+                            flex-wrap: nowrap;
+                            align-content: center;
+                            align-items: center;" >
+                            <input type="text" style="margin-bottom: 20px;"/>
                             <li><a id="let-person">Suivant </a></li>
                             
                             
@@ -198,17 +215,18 @@
             </div>
             <div class="menu3 hide">
                 <div class="menu-wrapper">
-                    <div class="initial hide">
-                        <h1>As-tu réaliser des formations ?</h1>
-                    </div>
-                    <div class="options hide" style="background: #ffffff33;
+                    <div class="options3 hide" style="background: #ffffff33;
                 margin: 0px 3%;
+                margin-top: 450px !important;
                 padding: 4px;
                 border-radius: 20px;
-                border: 1px solid yellow;">
+                border: 3px solid #fbd449;">
+                        <div class="initial hide">
+                            <h1>As-tu réaliser des formations ?</h1>
+                        </div>
                         <ul style="display: flex;padding-left: 1px;justify-content: center;" >
                             <li><a id="rex-person">Oui</a></li>
-                            <li><a id="dog-person">Non </a></li>
+                            <li><a >Non </a></li>
                             
                         </ul>
                     </div>
@@ -216,16 +234,23 @@
             </div>
             <div class="menu4 hide">
                 <div class="menu-wrapper">
-                    <div class="initial hide">
-                        <h1>Quelles étaient tes 3 dernières formations ?</h1>
-                    </div>
-                    <div class="options hide" style="background: #ffffff33;
+                    <div class="options4 hide" style="background: #ffffff33;
                 margin: 0px 3%;
                 padding: 4px;
+                margin-top: 450px !important;
                 border-radius: 20px;
-                border: 1px solid yellow;">
-                        <ul style="display: flex;padding-left: 1px;justify-content: center;" >
-                            <input type="text" />
+                border: 3px solid #fbd449;">
+                        <div class="initial hide">
+                            <h1>Quelles étaient tes 3 dernières formations ?</h1>
+                        </div>
+                        <ul style="display: flex;
+                            padding-left: 1px;
+                            justify-content: flex-start;
+                            flex-direction: column;
+                            flex-wrap: nowrap;
+                            align-content: center;
+                            align-items: center;" >
+                            <input type="text" style="margin-bottom: 20px;"/>
                             <li><a id="trex-person">Suivant </a></li>
                             
                         </ul>
@@ -234,54 +259,39 @@
             </div>
             <div class="menu5 hide">
                 <div class="menu-wrapper">
-                    <div class="initial hide">
-                        <h1>Types de contrat ?</h1>
-                    </div>
-                    <div class="options hide" style="background: #ffffff33;
+                   
+                    <div class="options5 hide" style="background: #ffffff33;
                 margin: 0px 3%;
                 padding: 4px;
+                margin-top: 450px !important;
                 border-radius: 20px;
-                border: 1px solid yellow;">
+                border: 3px solid #fbd449;">
+                         <div class="initial hide">
+                            <h1>Types de contrat ?</h1>
+                        </div>
                         <ul style="display: flex;padding-left: 1px;justify-content: center;" >
-                            <li><a id="retx-person">Interim </a></li>
-                            <li><a id="dog-person">CDI</a></li>
-                            <li><a id="let-person">CDD</a></li>
-                            <li><a id="rex-person">Stage</a></li>
+                            <li><a id="re-person">Interim </a></li>
+                            <li><a >CDI</a></li>
+                            <li><a >CDD</a></li>
+                            <li><a >Stage</a></li>
                             
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="menu6 hide">
-                <div class="menu-wrapper">
-                    <div class="initial hide">
-                        <h1>Tes disponibilités</h1>
-                    </div>
-                    <div class="options hide" style="background: #ffffff33;
-                margin: 0px 3%;
-                padding: 4px;
-                border-radius: 20px;
-                border: 1px solid yellow;">
-                        <ul style="display: flex;padding-left: 1px;justify-content: center;" >
-                            <li><a id="re-person">Autonome </a></li>
-                            <li><a id="dog-person">Dynamique </a></li>
-                            <li><a id="let-person">Serieux</a></li>
-                            <li><a id="rex-person">À l'écoute</a></li>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
+           
             <div class="menu7 hide">
                 <div class="menu-wrapper">
-                    <div class="initial hide">
-                        <h1>Travailler à coté de chez toi ou dans une autre région</h1>
-                    </div>
-                    <div class="options hide" style="background: #ffffff33;
+                    
+                    <div class="options7 hide" style="background: #ffffff33;
                 margin: 0px 3%;
                 padding: 4px;
+                margin-top: 450px !important;
                 border-radius: 20px;
-                border: 1px solid yellow;">
+                border: 3px solid #fbd449;">
+                        <div class="initial hide">
+                            <h1>Travailler à coté de chez toi ou dans une autre région</h1>
+                        </div>
                         <ul style="display: flex;padding-left: 1px;justify-content: center;" >
                             <li><a id="ex-person">Oui</a></li>
                             <li><a id="dog-person">Non </a></li>
@@ -291,22 +301,30 @@
                 </div>
             </div>
             <div class="menu8 hide">
-                <div class="menu-wrapper">
-                    <div class="initial hide">
-                        <h1>Quelle est la ville ou tu habites ?</h1>
-                    </div>
-                    <div class="options hide" style="background: #ffffff33;
+                <div class="menu-wrapper">                   
+                    <div class="options8 hide" style="background: #ffffff33;
                 margin: 0px 3%;
                 padding: 4px;
+                margin-top: 450px !important;
                 border-radius: 20px;
-                border: 1px solid yellow;">
+                border: 3px solid #fbd449;">
+                        <div class="initial hide">
+                            <h1>Quelle est la ville ou tu habites ?</h1>
+                        </div>
                         <ul style="display: flex;padding-left: 1px;justify-content: center;" >
                             <input type="text" />
                             
-                            <li><a id="cat-person">Suivant </a></li>
+                            <li><a src="assets/index%20copie.html">Suivant </a></li>
                             
                         </ul>
                     </div>
+                </div>
+            </div>
+             <div class="menu6 hide">
+                <div class="menu-wrapper">
+                   <div>
+                        
+                   </div>
                 </div>
             </div>
         </div>
@@ -315,24 +333,32 @@
         <script>
         window.onload = function() {
             var videosContainer = document.getElementsByClassName("videos")[0];
+            var videosContainer1 = document.getElementsByClassName("videos")[0];
+            var videosContainer2 = document.getElementsByClassName("videos")[0];
+            var videosContainer3 = document.getElementsByClassName("videos")[0];
+            var videosContainer4 = document.getElementsByClassName("videos")[0];
+            var videosContainer5 = document.getElementsByClassName("videos")[0];
+            var videosContainer6 = document.getElementsByClassName("videos")[0];
+            var videosContainer7 = document.getElementsByClassName("videos")[0];
+            var videosContainer8 = document.getElementsByClassName("videos")[0];
             var menu = document.getElementsByClassName("menu")[0];
             var menu1 = document.getElementsByClassName("menu1")[0];
             var menu2 = document.getElementsByClassName("menu2")[0];
             var menu3 = document.getElementsByClassName("menu3")[0];
             var menu4 = document.getElementsByClassName("menu4")[0];
             var menu5 = document.getElementsByClassName("menu5")[0];
-            var menu6 = document.getElementsByClassName("menu6")[0];
+            
             var menu7 = document.getElementsByClassName("menu7")[0];
             var menu8 = document.getElementsByClassName("menu8")[0];
             var menuOptions = menu.getElementsByClassName("options")[0];
-            var menuOptions1 = menu1.getElementsByClassName("options")[0];
-            var menuOptions2 = menu2.getElementsByClassName("options")[0];
-            var menuOptions3 = menu3.getElementsByClassName("options")[0];
-            var menuOptions4 = menu4.getElementsByClassName("options")[0];
-            var menuOptions5 = menu5.getElementsByClassName("options")[0];
-            var menuOptions6 = menu6.getElementsByClassName("options")[0];
-            var menuOptions7 = menu7.getElementsByClassName("options")[0];
-            var menuOptions8 = menu8.getElementsByClassName("options")[0];
+            var menuOptions1 = menu1.getElementsByClassName("options1")[0];
+            var menuOptions2 = menu2.getElementsByClassName("options2")[0];
+            var menuOptions3 = menu3.getElementsByClassName("options3")[0];
+            var menuOptions4 = menu4.getElementsByClassName("options4")[0];
+            var menuOptions5 = menu5.getElementsByClassName("options5")[0];
+            
+            var menuOptions7 = menu7.getElementsByClassName("options7")[0];
+            var menuOptions8 = menu8.getElementsByClassName("options8")[0];
 
             var playButton = document.getElementsByClassName("play")[0];
             playButton.onclick = function() {
@@ -342,45 +368,41 @@
 
             var catPersonLink = document.getElementById("cat-person");
             catPersonLink.onclick = function() {
-                showVideos(0, videosContainer.getElementsByClassName("cat"));
+                showVideos(0, videosContainer1.getElementsByClassName("cat"));
                 playInitialMenu1();
             }
 
             var dogPersonLink = document.getElementById("dog-person");
             dogPersonLink.onclick = function() {
-                showVideos(0, videosContainer.getElementsByClassName("dog"));
+                showVideos(0, videosContainer2.getElementsByClassName("dog"));
                 playInitialMenu2();
             }
             
-            var dogPersonLink = document.getElementById("let-person");
-            dogPersonLink.onclick = function() {
-                showVideos(0, videosContainer.getElementsByClassName("let"));
+            var letPersonLink = document.getElementById("let-person");
+            letPersonLink.onclick = function() {
+                showVideos(0, videosContainer3.getElementsByClassName("let"));
                 playInitialMenu3();
             }
             
             var dogPersonLink = document.getElementById("rex-person");
             dogPersonLink.onclick = function() {
-                showVideos(0, videosContainer.getElementsByClassName("rex"));
+                showVideos(0, videosContainer4.getElementsByClassName("rex"));
                 playInitialMenu4();
             }
             var dogPersonLink = document.getElementById("trex-person");
             dogPersonLink.onclick = function() {
-                showVideos(0, videosContainer.getElementsByClassName("trex"));
+                showVideos(0, videosContainer5.getElementsByClassName("trex"));
                 playInitialMenu5();
             }
-            var dogPersonLink = document.getElementById("retx-person");
-            dogPersonLink.onclick = function() {
-                showVideos(0, videosContainer.getElementsByClassName("retx"));
-                playInitialMenu6();
-            }
+            
             var dogPersonLink = document.getElementById("re-person");
             dogPersonLink.onclick = function() {
-                showVideos(0, videosContainer.getElementsByClassName("re"));
+                showVideos(0, videosContainer7.getElementsByClassName("re"));
                 playInitialMenu7();
             }
             var dogPersonLink = document.getElementById("ex-person");
             dogPersonLink.onclick = function() {
-                showVideos(0, videosContainer.getElementsByClassName("ex"));
+                showVideos(0, videosContainer8.getElementsByClassName("ex"));
                 playInitialMenu8();
             }
             
@@ -396,7 +418,7 @@
                 }, 1000);
             };
             function playInitialMenu1() {
-                playVideo(videosContainer.getElementsByClassName("initial")[0], loop=true);
+                playVideo1(videosContainer2.getElementsByClassName("cat")[0], loop=true);
 
                 setTimeout (function () {
                     menu1.style.display = "block";
@@ -406,7 +428,7 @@
                  
             };
             function playInitialMenu2() {
-                playVideo(videosContainer.getElementsByClassName("initial")[0], loop=true);
+               playVideo2(videosContainer2.getElementsByClassName("dog")[0], loop=true);
 
                 setTimeout (function () {
                     menu2.style.display = "block";
@@ -416,7 +438,7 @@
                  
             };
             function playInitialMenu3() {
-                playVideo(videosContainer.getElementsByClassName("initial")[0], loop=true);
+                playVideo3(videosContainer3.getElementsByClassName("let")[0], loop=true);
 
                 setTimeout (function () {
                     menu3.style.display = "block";
@@ -426,7 +448,7 @@
                  
             };
             function playInitialMenu4() {
-                playVideo(videosContainer.getElementsByClassName("initial")[0], loop=true);
+                playVideo4(videosContainer4.getElementsByClassName("rex")[0], loop=true);
 
                 setTimeout (function () {
                     menu4.style.display = "block";
@@ -436,7 +458,7 @@
                  
             };
             function playInitialMenu5() {
-                playVideo(videosContainer.getElementsByClassName("initial")[0], loop=true);
+                playVideo5(videosContainer5.getElementsByClassName("trex")[0], loop=true);
 
                 setTimeout (function () {
                     menu5.style.display = "block";
@@ -445,18 +467,9 @@
                 }, 1000);
                  
             };
-            function playInitialMenu6() {
-                playVideo(videosContainer.getElementsByClassName("initial")[0], loop=true);
 
-                setTimeout (function () {
-                    menu6.style.display = "block";
-                    menu6.getElementsByClassName("initial")[0].style.display = "block";
-                    menuOptions6.style.display = "block";
-                }, 1000);
-                 
-            };
             function playInitialMenu7() {
-                playVideo(videosContainer.getElementsByClassName("initial")[0], loop=true);
+                playVideo7(videosContainer7.getElementsByClassName("re")[0], loop=true);
 
                 setTimeout (function () {
                     menu7.style.display = "block";
@@ -466,7 +479,7 @@
                  
             };
             function playInitialMenu8() {
-                playVideo(videosContainer.getElementsByClassName("initial")[0], loop=true);
+                playVideo8(videosContainer8.getElementsByClassName("ex")[0], loop=true);
 
                 setTimeout (function () {
                     menu8.style.display = "block";
@@ -487,13 +500,111 @@
                 videoContainer.classList.add("active");
 
                 var video = videoContainer.getElementsByTagName("video")[0];
-                video.preload = "auto";
-                video.load();
                 video.play();
-                video.loop = loop;
 
                 return video;
             }
+            function playVideo1(videoContainer, loop=false) {
+                var lastVideoContainer = videosContainer.getElementsByClassName("cat")[0];
+                lastVideoContainer.classList.remove("cat");
+                lastVideoContainer.style.display = "none";
+
+                videoContainer.style.display = "block";
+                videoContainer.classList.add("cat");
+
+                var video = videoContainer.getElementsByTagName("video")[0];
+                
+                video.play();
+
+                return video;
+            }
+            function playVideo2(videoContainer, loop=false) {
+                var lastVideoContainer = videosContainer.getElementsByClassName("dog")[0];
+                lastVideoContainer.classList.remove("dog");
+                lastVideoContainer.style.display = "none";
+
+                videoContainer.style.display = "block";
+                videoContainer.classList.add("dog");
+
+                var video = videoContainer.getElementsByTagName("video")[0];
+                video.play();
+
+                return video;
+            }function playVideo3(videoContainer, loop=false) {
+                var lastVideoContainer = videosContainer.getElementsByClassName("let")[0];
+                lastVideoContainer.classList.remove("let");
+                lastVideoContainer.style.display = "none";
+
+                videoContainer.style.display = "block";
+                videoContainer.classList.add("let");
+
+                var video = videoContainer.getElementsByTagName("video")[0];
+                video.preload = "auto";
+                
+                video.play();
+
+                return video;
+            }function playVideo4(videoContainer, loop=false) {
+                var lastVideoContainer = videosContainer.getElementsByClassName("rex")[0];
+                lastVideoContainer.classList.remove("rex");
+                lastVideoContainer.style.display = "none";
+
+                videoContainer.style.display = "block";
+                videoContainer.classList.add("rex");
+
+                var video = videoContainer.getElementsByTagName("video")[0];
+                video.preload = "auto";
+                
+                video.play();
+
+                return video;
+            }function playVideo5(videoContainer, loop=false) {
+                var lastVideoContainer = videosContainer.getElementsByClassName("trex")[0];
+                lastVideoContainer.classList.remove("trex");
+                lastVideoContainer.style.display = "none";
+
+                videoContainer.style.display = "block";
+                videoContainer.classList.add("trex");
+
+                var video = videoContainer.getElementsByTagName("video")[0];
+                video.preload = "auto";
+                
+                video.play();
+
+                return video;
+            }
+           
+            function playVideo7(videoContainer, loop=false) {
+                var lastVideoContainer = videosContainer.getElementsByClassName("re")[0];
+                lastVideoContainer.classList.remove("re");
+                lastVideoContainer.style.display = "none";
+
+                videoContainer.style.display = "block";
+                videoContainer.classList.add("re");
+
+                var video = videoContainer.getElementsByTagName("video")[0];
+                video.preload = "auto";
+                
+                video.play();
+
+                return video;
+            }
+            function playVideo8(videoContainer, loop=false) {
+                var lastVideoContainer = videosContainer.getElementsByClassName("ex")[0];
+                lastVideoContainer.classList.remove("ex");
+                lastVideoContainer.style.display = "none";
+
+                videoContainer.style.display = "block";
+                videoContainer.classList.add("ex");
+
+                var video = videoContainer.getElementsByTagName("video")[0];
+                video.preload = "auto";
+                
+                video.play();
+
+                return video;
+            }
+
 
             function showVideos(index, videos) {
                 if (index < (videos.length - 1)) {
@@ -508,12 +619,20 @@
                 menu3.style.display = "none";
                 menu4.style.display = "none";
                 menu5.style.display = "none";
-                menu6.style.display = "none";
+                
                 menu7.style.display = "none";
                 menu8.style.display = "none";
                 
 
                 var video = playVideo(videos[index]);
+                var video = playVideo1(videos[index]);
+                var video = playVideo2(videos[index]);
+                var video = playVideo3(videos[index]);
+                var video = playVideo4(videos[index]);
+                var video = playVideo5(videos[index]);
+                
+                var video = playVideo7(videos[index]);
+                var video = playVideo8(videos[index]);
 
                 video.addEventListener("timeupdate", function() {
                     var currentTime = (this.currentTime / this.duration) * 100;
@@ -528,8 +647,6 @@
                 video.onended = function() {
                     if (hasNextVideo) {
                         showVideos(index+1, videos);
-                    } else {
-                        playClosingMenu();
                     }
                 }
             }
